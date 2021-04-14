@@ -1,0 +1,11 @@
+予約語
+<%= link_to "すべての答えを見る", reserved_words_check_all_path, class: "all_answer", remote: true %>
+<br>
+
+<% @words.each do |word| %>
+<div class="box">
+  <div class="hidden_word reserved_words_<%= word.id %>"><%= word.word %></div>
+  <%= link_to "答えを見る", reserved_words_check_path(word), class: "reserved_words_answer_#{word.id}", remote: true %>
+</div>
+
+<% end %>
