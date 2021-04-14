@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyText
+  judge: 1
+  explanation: MyText
+
+two:
+  question: MyText
+  judge: 1
+  explanation: MyText

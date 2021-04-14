@@ -1,0 +1,11 @@
+問題を作成します
+<%= form_with model: @question, local: true do |f| %>
+  <%= f.label :question, "問題" %>
+  <%= f.text_area :question %>
+  <%= f.label :judge, "正誤判定" %>
+  <%= f.radio_button :judge, :true, default: true %><%= f.label :judge, "〇" %>
+  <%= f.radio_button :judge, :false %><%= f.label :judge, "×" %>
+  
+  <%= f.submit "新規登録する" %>
+
+<% end %>
