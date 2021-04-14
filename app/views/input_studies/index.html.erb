@@ -1,0 +1,13 @@
+<h2>記述で覚える問題</h2>
+<%= link_to "〇×問題をやる", t_fexercises_path %>
+<%= link_to "新規作成する", new_input_study_path %>
+<% @questions.each do |question| %>
+<div class="question_box">
+  <div class="question"><%= question.question %></div>
+  <textarea class="input_study_form" autofocus="true" rows="2" cols="40"></textarea>
+  <%= link_to "答えを見る", input_studies_check_path(question), class: "question_answer_show_#{question.id}", remote: true %>
+  <div class="hidden_word question_answer_<%= question.id %>"><%= question.explanation %></div>
+  <%= link_to "編集する", edit_input_study_path(question) %>
+  <%= link_to "削除する", input_study_path(question), method: :delete, data: {confirm: '本当に消して大丈夫ですか？'} %>
+</div>
+<% end %>

@@ -1,0 +1,2 @@
+class InputStudy < ApplicationRecord
+end

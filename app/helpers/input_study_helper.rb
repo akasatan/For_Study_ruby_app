@@ -1,0 +1,2 @@
+module InputStudyHelper
+end

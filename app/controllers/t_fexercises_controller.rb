@@ -42,8 +42,6 @@ class TFexercisesController < ApplicationController
     @question = TFexercise.find(params[:id])
   end
 
-  def check_all
-  end
   
   private
   def exercise_params

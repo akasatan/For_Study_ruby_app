@@ -49,3 +49,7 @@ ReservedWord.create!([
 {id: 40, word: "__FILE__"},
 {id: 41, word: "__ENCODING__"}
 ])
+
+Admin.create!([
+  {email: ENV['ADMIN_EMAIL'], password: ENV['ADMIN_PASSWORD']
+  }])

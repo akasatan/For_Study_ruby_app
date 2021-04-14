@@ -1,0 +1,12 @@
+用語を覚えるための問題を作成します
+
+<%= form_with model: @question, local: true do |f| %>
+<table>
+  <tr><td><%= f.label :question, "ワードの問題" %></td></tr>
+  <tr><td><%= f.text_area :question, rows: 5, cols: 60 %></td></tr>
+  <tr><td><%= f.label :explanation, "答え" %></td></tr>
+  <tr><td><%= f.text_area :explanation, rows: 5, cols: 60 %></td></tr>
+  
+  <td><%= f.submit "新規登録する" %><td></tr>
+</table>
+<% end %>

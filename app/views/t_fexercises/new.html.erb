@@ -1,7 +1,7 @@
 問題を作成します
-<table>
-<%= form_with model: @question, local: true do |f| %>
 
+<%= form_with model: @question, local: true do |f| %>
+<table>
   <tr><td><%= f.label :question, "問題" %></td></tr>
   <tr><td><%= f.text_area :question, rows: 5, cols: 60 %></td></tr>
   <tr><td><%= f.label :judge, "正誤判定" %></td></tr>
@@ -11,6 +11,5 @@
   <tr><td><%= f.text_area :explanation, rows: 5, cols: 60 %></td></tr>
   
   <td><%= f.submit "新規登録する" %><td></tr>
-
-<% end %>
 </table>
+<% end %>

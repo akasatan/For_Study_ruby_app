@@ -1,8 +1,9 @@
 <h2>〇×問題！</h2>
+<%= link_to "ワード問題をやる", input_studies_path %>
 <%= link_to "新規作成する", new_t_fexercise_path %>
 <% @questions.each do |question| %>
 <div class="question_box">
-  <%= question.question %>
+  <div class="question"><%= question.question %></div>
   <%= link_to "答えを見る", t_fexercises_check_path(question), class: "question_answer_show_#{question.id}", remote: true %>
   <div class="hidden_word question_answer_<%= question.id %>"><%= question.judge %></div>
   <div class="hidden_word question_answer_<%= question.id %>"><%= question.explanation %></div>
