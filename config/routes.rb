@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 't_fexercises/check'
-  get 't_fexercises/check_all'
+  get 't_fexercises/:id/check' => 't_fexercises#check', as: 't_fexercises_check'
   resources :t_fexercises
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

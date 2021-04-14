@@ -1,0 +1,12 @@
+<h2>〇×問題！</h2>
+<%= link_to "新規作成する", new_t_fexercise_path %>
+<% @questions.each do |question| %>
+<div class="question_box">
+  <%= question.question %>
+  <%= link_to "答えを見る", t_fexercises_check_path(question), class: "question_answer_show_#{question.id}", remote: true %>
+  <div class="hidden_word question_answer_<%= question.id %>"><%= question.judge %></div>
+  <div class="hidden_word question_answer_<%= question.id %>"><%= question.explanation %></div>
+  <%= link_to "編集する", edit_t_fexercise_path(question) %>
+  <%= link_to "削除する", t_fexercise_path(question), method: :delete, data: {confirm: '本当に消して大丈夫ですか？'} %>
+</div>
+<% end %>

@@ -4,7 +4,7 @@ class TFexercisesController < ApplicationController
   end
   
   def index
-    @question = TFexercise.all
+    @questions = TFexercise.all
   end
   
   def create
@@ -16,10 +16,30 @@ class TFexercisesController < ApplicationController
     end
   end
   
-  def show
+  def edit
+    @question = TFexercise.find(params[:id])
   end
-
+  
+  def update
+    @question = TFexercise.find(params[:id])
+    if @question.update(exercise_params)
+      redirect_to t_fexercises_path
+    else
+      render :edit
+    end
+  end
+  
+  def destroy
+    @question = TFexercise.find(params[:id])
+    if @question.destroy
+      redirect_to t_fexercises_path
+    else
+      render :index
+    end
+  end
+  
   def check
+    @question = TFexercise.find(params[:id])
   end
 
   def check_all

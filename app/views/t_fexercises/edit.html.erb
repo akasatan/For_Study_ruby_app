@@ -1,4 +1,4 @@
-問題を作成します
+問題を編集します
 <table>
 <%= form_with model: @question, local: true do |f| %>
 
@@ -10,7 +10,7 @@
   <tr><td><%= f.label :explanation, "解説" %></td></tr>
   <tr><td><%= f.text_area :explanation, rows: 5, cols: 60 %></td></tr>
   
-  <td><%= f.submit "新規登録する" %><td></tr>
+  <td><%= f.submit "編集完了！" %><td></tr>
 
 <% end %>
 </table>
